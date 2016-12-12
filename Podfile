@@ -4,7 +4,7 @@ platform :ios, '8.0'
 target 'PengCaCa' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
-  pod 'SDWebImage', '~> 4.0.0-beta2'
+  pod 'SDWebImage'
   pod 'AFNetworking','~>3.1.0'
   pod 'Masonry', '~> 1.0.2'
   # Pods for PengCaCa
