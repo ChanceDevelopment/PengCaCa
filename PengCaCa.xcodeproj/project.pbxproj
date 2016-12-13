@@ -27,7 +27,6 @@
 		A2A5F80D1DFE9957003BC5C1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F80C1DFE9957003BC5C1 /* MainViewController.m */; };
 		A2A5F8111DFE9B41003BC5C1 /* ArtistListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F80F1DFE9B41003BC5C1 /* ArtistListCollectionViewCell.m */; };
 		A2A5F8151DFF802A003BC5C1 /* ArtistListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F8141DFF802A003BC5C1 /* ArtistListTableViewCell.m */; };
-		A2A5F8171DFFED60003BC5C1 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A5F8161DFFED60003BC5C1 /* Test.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,7 +66,6 @@
 		A2A5F80F1DFE9B41003BC5C1 /* ArtistListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistListCollectionViewCell.m; sourceTree = "<group>"; };
 		A2A5F8131DFF802A003BC5C1 /* ArtistListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistListTableViewCell.h; sourceTree = "<group>"; };
 		A2A5F8141DFF802A003BC5C1 /* ArtistListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistListTableViewCell.m; sourceTree = "<group>"; };
-		A2A5F8161DFFED60003BC5C1 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +148,6 @@
 				A2A5F80B1DFE9957003BC5C1 /* MainViewController.h */,
 				A2A5F80C1DFE9957003BC5C1 /* MainViewController.m */,
 				A2A5F7BA1DFE7083003BC5C1 /* Main.storyboard */,
-				A2A5F8161DFFED60003BC5C1 /* Test.storyboard */,
 				A2A5F7BD1DFE7083003BC5C1 /* Assets.xcassets */,
 				A2A5F7BF1DFE7083003BC5C1 /* LaunchScreen.storyboard */,
 				A2A5F7C21DFE7083003BC5C1 /* Info.plist */,
@@ -431,7 +428,6 @@
 				A2A5F7BE1DFE7083003BC5C1 /* Assets.xcassets in Resources */,
 				A2A5F7BC1DFE7083003BC5C1 /* Main.storyboard in Resources */,
 				A2A5F7F61DFE7A90003BC5C1 /* RegisterController.xib in Resources */,
-				A2A5F8171DFFED60003BC5C1 /* Test.storyboard in Resources */,
 				A2A5F7F11DFE7A71003BC5C1 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,7 +2,7 @@
 //  NoticeController.m
 //  PengCaCa
 //
-//  Created by 龙少 on 2016/12/12.
+//  Created by likeSo on 2016/12/12.
 //  Copyright © 2016年 chance. All rights reserved.
 //
 
@@ -10,6 +10,10 @@
 #import "Macro.h"
 
 @interface NoticeController ()
+/**
+ *  导航栏左边按钮
+ */
+@property(nonatomic,strong)UIButton *leftButtonItem;
 
 @end
 
@@ -22,13 +26,32 @@
 }
 
 - (void)setupView {
-    UISearchBar *searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, kScaleOfScreenWidth(85), 30)];
+    UIView *containerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScaleOfScreenWidth(185), 28)];
+    UISearchBar *searchBar = [[UISearchBar alloc]initWithFrame:containerView.bounds];
     searchBar.placeholder = @"输入您想要的ID或者昵称";
     searchBar.layer.cornerRadius = 3;
     searchBar.clipsToBounds = YES;
     searchBar.layer.borderColor = [UIColor blackColor].CGColor;
     searchBar.layer.borderWidth = 1;
-    self.navigationItem.titleView = searchBar;
+    [containerView addSubview:searchBar];
+    self.navigationItem.titleView = containerView;
+    
+    self.leftButtonItem = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.leftButtonItem.frame = CGRectMake(0, 0, kScaleOfScreenWidth(65),20);
+    self.leftButtonItem.titleLabel.font = [UIFont systemFontOfSize:13];
+    [self.leftButtonItem setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.leftButtonItem setTitle:@"杭州 " forState:UIControlStateNormal];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithCustomView:self.leftButtonItem];
+    self.navigationItem.leftBarButtonItem = leftItem;
+    
+    UIButton *releaseOrderBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    releaseOrderBtn.frame = CGRectMake(0, 0, kScaleOfScreenWidth(75), 20);
+    [releaseOrderBtn setTitle:@"发布订单" forState:UIControlStateNormal];
+    releaseOrderBtn.titleLabel.font = [UIFont systemFontOfSize:13];
+    [releaseOrderBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//    releaseOrderBtn.imageEdgeInsets = UIEdgeInsetsMake(0, <#CGFloat left#>, <#CGFloat bottom#>, <#CGFloat right#>)
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithCustomView:releaseOrderBtn];
+    self.navigationItem.rightBarButtonItem = rightItem;
 }
 
 - (void)didReceiveMemoryWarning {

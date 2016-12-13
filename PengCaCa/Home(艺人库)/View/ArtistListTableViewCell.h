@@ -2,7 +2,7 @@
 //  ArtistListTableViewCell.h
 //  PengCaCa
 //
-//  Created by 龙少 on 2016/12/13.
+//  Created by likeSo on 2016/12/13.
 //  Copyright © 2016年 chance. All rights reserved.
 //
 

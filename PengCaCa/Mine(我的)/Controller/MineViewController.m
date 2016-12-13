@@ -2,7 +2,7 @@
 //  MineViewController.m
 //  PengCaCa
 //
-//  Created by 龙少 on 2016/12/12.
+//  Created by likeSo on 2016/12/12.
 //  Copyright © 2016年 chance. All rights reserved.
 //
 
@@ -44,6 +44,12 @@
 @property (weak, nonatomic) IBOutlet UIView *topLineView;
 @property (weak, nonatomic) IBOutlet UIView *bottomLineView;
 
+/**
+ *  上一次点击的分段按钮
+ */
+@property(nonatomic,strong)UIButton *lastSelectButton;
+
+
 @end
 
 @implementation MineViewController
@@ -76,7 +82,7 @@
         make.top.equalTo(self.mas_topLayoutGuideBottom);
     }];
     
-    
+    self.lastSelectButton = self.authInfoBtn;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -100,7 +106,13 @@
 #pragma mark :- 头部四个按钮点击
 - (IBAction)onSegment:(UIButton *)sender {
     NSUInteger index = sender.tag - 10000;//从左到右按照下标数
-    
+    if (_lastSelectButton) {
+        _lastSelectButton.titleLabel.font = [UIFont systemFontOfSize:13];
+        [_lastSelectButton setTitleColor:UIColorFromRGB(0xB6B6B6) forState:UIControlStateNormal];
+    }
+    sender.titleLabel.font = [UIFont systemFontOfSize:14];
+    [sender setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    _lastSelectButton = sender;
 }
 
 

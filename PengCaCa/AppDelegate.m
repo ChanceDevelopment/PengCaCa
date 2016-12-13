@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  PengCaCa
 //
-//  Created by 龙少 on 2016/12/12.
+//  Created by likeSo on 2016/12/12.
 //  Copyright © 2016年 chance. All rights reserved.
 //
 
