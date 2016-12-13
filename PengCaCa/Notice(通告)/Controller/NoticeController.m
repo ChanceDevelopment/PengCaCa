@@ -22,7 +22,7 @@
 }
 
 - (void)setupView {
-    UISearchBar *searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, kScaleOfScreenWidth(120), 30)];
+    UISearchBar *searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, kScaleOfScreenWidth(85), 30)];
     searchBar.placeholder = @"输入您想要的ID或者昵称";
     searchBar.layer.cornerRadius = 3;
     searchBar.clipsToBounds = YES;
