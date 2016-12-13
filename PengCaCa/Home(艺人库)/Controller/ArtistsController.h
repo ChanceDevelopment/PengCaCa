@@ -9,9 +9,14 @@
 #import <UIKit/UIKit.h>
 
 
+
 /**
  艺人库首页
  */
-@interface ArtistsController : UIViewController
+@interface ArtistsController : UIViewController<UICollectionViewDelegate,
+UICollectionViewDataSource,
+UICollectionViewDelegateFlowLayout,
+UITableViewDelegate,
+UITableViewDataSource>
 
 @end

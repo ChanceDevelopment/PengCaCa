@@ -27,6 +27,11 @@
 		A2A5F7FC1DFE7B07003BC5C1 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F7FB1DFE7B07003BC5C1 /* OrderViewController.m */; };
 		A2A5F7FF1DFE7B55003BC5C1 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F7FE1DFE7B55003BC5C1 /* ScheduleViewController.m */; };
 		A2A5F8021DFE7B85003BC5C1 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F8011DFE7B85003BC5C1 /* MineViewController.m */; };
+		A2A5F8071DFE853A003BC5C1 /* NavigatorSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F8061DFE853A003BC5C1 /* NavigatorSlider.m */; };
+		A2A5F80A1DFE8BBA003BC5C1 /* Macro.h in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F8091DFE8BBA003BC5C1 /* Macro.h */; };
+		A2A5F80D1DFE9957003BC5C1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F80C1DFE9957003BC5C1 /* MainViewController.m */; };
+		A2A5F8111DFE9B41003BC5C1 /* ArtistListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F80F1DFE9B41003BC5C1 /* ArtistListCollectionViewCell.m */; };
+		A2A5F8151DFF802A003BC5C1 /* ArtistListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F8141DFF802A003BC5C1 /* ArtistListTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +67,15 @@
 		A2A5F7FE1DFE7B55003BC5C1 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
 		A2A5F8001DFE7B85003BC5C1 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		A2A5F8011DFE7B85003BC5C1 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		A2A5F8051DFE853A003BC5C1 /* NavigatorSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigatorSlider.h; sourceTree = "<group>"; };
+		A2A5F8061DFE853A003BC5C1 /* NavigatorSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigatorSlider.m; sourceTree = "<group>"; };
+		A2A5F8091DFE8BBA003BC5C1 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		A2A5F80B1DFE9957003BC5C1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A2A5F80C1DFE9957003BC5C1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		A2A5F80E1DFE9B41003BC5C1 /* ArtistListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistListCollectionViewCell.h; sourceTree = "<group>"; };
+		A2A5F80F1DFE9B41003BC5C1 /* ArtistListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistListCollectionViewCell.m; sourceTree = "<group>"; };
+		A2A5F8131DFF802A003BC5C1 /* ArtistListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistListTableViewCell.h; sourceTree = "<group>"; };
+		A2A5F8141DFF802A003BC5C1 /* ArtistListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistListTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +155,8 @@
 			children = (
 				A2A5F7B41DFE7083003BC5C1 /* AppDelegate.h */,
 				A2A5F7B51DFE7083003BC5C1 /* AppDelegate.m */,
+				A2A5F80B1DFE9957003BC5C1 /* MainViewController.h */,
+				A2A5F80C1DFE9957003BC5C1 /* MainViewController.m */,
 				A2A5F7BA1DFE7083003BC5C1 /* Main.storyboard */,
 				A2A5F7BD1DFE7083003BC5C1 /* Assets.xcassets */,
 				A2A5F7BF1DFE7083003BC5C1 /* LaunchScreen.storyboard */,
@@ -179,6 +195,10 @@
 		A2A5F7CC1DFE723B003BC5C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A2A5F80E1DFE9B41003BC5C1 /* ArtistListCollectionViewCell.h */,
+				A2A5F80F1DFE9B41003BC5C1 /* ArtistListCollectionViewCell.m */,
+				A2A5F8131DFF802A003BC5C1 /* ArtistListTableViewCell.h */,
+				A2A5F8141DFF802A003BC5C1 /* ArtistListTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -199,6 +219,7 @@
 		A2A5F7CE1DFE723B003BC5C1 /* Macro */ = {
 			isa = PBXGroup;
 			children = (
+				A2A5F8091DFE8BBA003BC5C1 /* Macro.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -342,8 +363,18 @@
 		A2A5F7DF1DFE723B003BC5C1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A2A5F8041DFE8509003BC5C1 /* Views */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		A2A5F8041DFE8509003BC5C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2A5F8051DFE853A003BC5C1 /* NavigatorSlider.h */,
+				A2A5F8061DFE853A003BC5C1 /* NavigatorSlider.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,9 +510,14 @@
 				A2A5F7B61DFE7083003BC5C1 /* AppDelegate.m in Sources */,
 				A2A5F7EC1DFE779F003BC5C1 /* ArtistsController.m in Sources */,
 				A2A5F8021DFE7B85003BC5C1 /* MineViewController.m in Sources */,
+				A2A5F8071DFE853A003BC5C1 /* NavigatorSlider.m in Sources */,
 				A2A5F7B31DFE7083003BC5C1 /* main.m in Sources */,
+				A2A5F8151DFF802A003BC5C1 /* ArtistListTableViewCell.m in Sources */,
 				A2A5F7FC1DFE7B07003BC5C1 /* OrderViewController.m in Sources */,
+				A2A5F80D1DFE9957003BC5C1 /* MainViewController.m in Sources */,
+				A2A5F80A1DFE8BBA003BC5C1 /* Macro.h in Sources */,
 				A2A5F7F51DFE7A90003BC5C1 /* RegisterController.m in Sources */,
+				A2A5F8111DFE9B41003BC5C1 /* ArtistListCollectionViewCell.m in Sources */,
 				A2A5F7F91DFE7AD2003BC5C1 /* NoticeController.m in Sources */,
 				A2A5F7FF1DFE7B55003BC5C1 /* ScheduleViewController.m in Sources */,
 			);

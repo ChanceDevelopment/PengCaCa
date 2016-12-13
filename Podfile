@@ -7,6 +7,7 @@ target 'PengCaCa' do
   pod 'SDWebImage'
   pod 'AFNetworking','~>3.1.0'
   pod 'Masonry', '~> 1.0.2'
+  pod 'HCSStarRatingView', '~> 1.4.5'
   # Pods for PengCaCa
 
 end
