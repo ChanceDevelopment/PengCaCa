@@ -13,11 +13,6 @@
 		A2A5F7BC1DFE7083003BC5C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A5F7BA1DFE7083003BC5C1 /* Main.storyboard */; };
 		A2A5F7BE1DFE7083003BC5C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2A5F7BD1DFE7083003BC5C1 /* Assets.xcassets */; };
 		A2A5F7C11DFE7083003BC5C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A5F7BF1DFE7083003BC5C1 /* LaunchScreen.storyboard */; };
-		A2A5F7E11DFE769B003BC5C1 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A5F7E01DFE769B003BC5C1 /* Home.storyboard */; };
-		A2A5F7E31DFE76BB003BC5C1 /* Notice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A5F7E21DFE76BB003BC5C1 /* Notice.storyboard */; };
-		A2A5F7E51DFE76E4003BC5C1 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A5F7E41DFE76E4003BC5C1 /* Order.storyboard */; };
-		A2A5F7E71DFE770D003BC5C1 /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A5F7E61DFE770D003BC5C1 /* Schedule.storyboard */; };
-		A2A5F7E91DFE772A003BC5C1 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A5F7E81DFE772A003BC5C1 /* Mine.storyboard */; };
 		A2A5F7EC1DFE779F003BC5C1 /* ArtistsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F7EB1DFE779F003BC5C1 /* ArtistsController.m */; };
 		A2A5F7F01DFE7A71003BC5C1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F7EE1DFE7A71003BC5C1 /* LoginViewController.m */; };
 		A2A5F7F11DFE7A71003BC5C1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2A5F7EF1DFE7A71003BC5C1 /* LoginViewController.xib */; };
@@ -32,6 +27,7 @@
 		A2A5F80D1DFE9957003BC5C1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F80C1DFE9957003BC5C1 /* MainViewController.m */; };
 		A2A5F8111DFE9B41003BC5C1 /* ArtistListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F80F1DFE9B41003BC5C1 /* ArtistListCollectionViewCell.m */; };
 		A2A5F8151DFF802A003BC5C1 /* ArtistListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F8141DFF802A003BC5C1 /* ArtistListTableViewCell.m */; };
+		A2A5F8171DFFED60003BC5C1 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A5F8161DFFED60003BC5C1 /* Test.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,11 +42,6 @@
 		A2A5F7BD1DFE7083003BC5C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		A2A5F7C01DFE7083003BC5C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2A5F7C21DFE7083003BC5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
-		A2A5F7E01DFE769B003BC5C1 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		A2A5F7E21DFE76BB003BC5C1 /* Notice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notice.storyboard; sourceTree = "<group>"; };
-		A2A5F7E41DFE76E4003BC5C1 /* Order.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
-		A2A5F7E61DFE770D003BC5C1 /* Schedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
-		A2A5F7E81DFE772A003BC5C1 /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
 		A2A5F7EA1DFE779F003BC5C1 /* ArtistsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistsController.h; sourceTree = "<group>"; };
 		A2A5F7EB1DFE779F003BC5C1 /* ArtistsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistsController.m; sourceTree = "<group>"; };
 		A2A5F7ED1DFE7A71003BC5C1 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -76,6 +67,7 @@
 		A2A5F80F1DFE9B41003BC5C1 /* ArtistListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistListCollectionViewCell.m; sourceTree = "<group>"; };
 		A2A5F8131DFF802A003BC5C1 /* ArtistListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistListTableViewCell.h; sourceTree = "<group>"; };
 		A2A5F8141DFF802A003BC5C1 /* ArtistListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistListTableViewCell.m; sourceTree = "<group>"; };
+		A2A5F8161DFFED60003BC5C1 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +150,7 @@
 				A2A5F80B1DFE9957003BC5C1 /* MainViewController.h */,
 				A2A5F80C1DFE9957003BC5C1 /* MainViewController.m */,
 				A2A5F7BA1DFE7083003BC5C1 /* Main.storyboard */,
+				A2A5F8161DFFED60003BC5C1 /* Test.storyboard */,
 				A2A5F7BD1DFE7083003BC5C1 /* Assets.xcassets */,
 				A2A5F7BF1DFE7083003BC5C1 /* LaunchScreen.storyboard */,
 				A2A5F7C21DFE7083003BC5C1 /* Info.plist */,
@@ -168,7 +161,6 @@
 		A2A5F7C91DFE723B003BC5C1 /* Home(艺人库) */ = {
 			isa = PBXGroup;
 			children = (
-				A2A5F7E01DFE769B003BC5C1 /* Home.storyboard */,
 				A2A5F7CA1DFE723B003BC5C1 /* Controller */,
 				A2A5F7CB1DFE723B003BC5C1 /* Model */,
 				A2A5F7CC1DFE723B003BC5C1 /* View */,
@@ -227,7 +219,6 @@
 		A2A5F7CF1DFE723B003BC5C1 /* Mine(我的) */ = {
 			isa = PBXGroup;
 			children = (
-				A2A5F7E81DFE772A003BC5C1 /* Mine.storyboard */,
 				A2A5F7D01DFE723B003BC5C1 /* Controller */,
 				A2A5F7D11DFE723B003BC5C1 /* Model */,
 				A2A5F7D21DFE723B003BC5C1 /* View */,
@@ -261,7 +252,6 @@
 		A2A5F7D31DFE723B003BC5C1 /* Notice(通告) */ = {
 			isa = PBXGroup;
 			children = (
-				A2A5F7E21DFE76BB003BC5C1 /* Notice.storyboard */,
 				A2A5F7D41DFE723B003BC5C1 /* Controller */,
 				A2A5F7D51DFE723B003BC5C1 /* Model */,
 				A2A5F7D61DFE723B003BC5C1 /* View */,
@@ -295,7 +285,6 @@
 		A2A5F7D71DFE723B003BC5C1 /* Order(订单) */ = {
 			isa = PBXGroup;
 			children = (
-				A2A5F7E41DFE76E4003BC5C1 /* Order.storyboard */,
 				A2A5F7D81DFE723B003BC5C1 /* Controller */,
 				A2A5F7D91DFE723B003BC5C1 /* Model */,
 				A2A5F7DA1DFE723B003BC5C1 /* View */,
@@ -329,7 +318,6 @@
 		A2A5F7DB1DFE723B003BC5C1 /* Schedule(档期) */ = {
 			isa = PBXGroup;
 			children = (
-				A2A5F7E61DFE770D003BC5C1 /* Schedule.storyboard */,
 				A2A5F7DC1DFE723B003BC5C1 /* Controller */,
 				A2A5F7DD1DFE723B003BC5C1 /* Model */,
 				A2A5F7DE1DFE723B003BC5C1 /* View */,
@@ -411,7 +399,8 @@
 				TargetAttributes = {
 					A2A5F7AD1DFE7083003BC5C1 = {
 						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = E6CUH72B23;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -438,15 +427,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2A5F7E71DFE770D003BC5C1 /* Schedule.storyboard in Resources */,
 				A2A5F7C11DFE7083003BC5C1 /* LaunchScreen.storyboard in Resources */,
 				A2A5F7BE1DFE7083003BC5C1 /* Assets.xcassets in Resources */,
-				A2A5F7E31DFE76BB003BC5C1 /* Notice.storyboard in Resources */,
 				A2A5F7BC1DFE7083003BC5C1 /* Main.storyboard in Resources */,
-				A2A5F7E11DFE769B003BC5C1 /* Home.storyboard in Resources */,
 				A2A5F7F61DFE7A90003BC5C1 /* RegisterController.xib in Resources */,
-				A2A5F7E51DFE76E4003BC5C1 /* Order.storyboard in Resources */,
-				A2A5F7E91DFE772A003BC5C1 /* Mine.storyboard in Resources */,
+				A2A5F8171DFFED60003BC5C1 /* Test.storyboard in Resources */,
 				A2A5F7F11DFE7A71003BC5C1 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -642,10 +627,15 @@
 			baseConfigurationReference = 06A496B511B833ACCEDA8866 /* Pods-PengCaCa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = E6CUH72B23;
 				INFOPLIST_FILE = PengCaCa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.chance.PengCaCa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.channce.pengcaca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = 2016_12_13_distribution;
 			};
 			name = Debug;
 		};
@@ -654,10 +644,15 @@
 			baseConfigurationReference = 7A354A661DBAB518D3D876CD /* Pods-PengCaCa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = E6CUH72B23;
 				INFOPLIST_FILE = PengCaCa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.chance.PengCaCa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.channce.pengcaca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = 2016_12_13_distribution;
 			};
 			name = Release;
 		};

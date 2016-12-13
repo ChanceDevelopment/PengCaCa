@@ -41,7 +41,7 @@
     if (self = [super initWithFrame:frame]) {
         self.imageView = [[UIImageView alloc]initWithFrame:CGRectZero];
         self.imageView.clipsToBounds = YES;
-        self.imageView.backgroundColor = [UIColor whiteColor];
+        self.imageView.backgroundColor = kSelectedColor;
         self.imageView.layer.cornerRadius = 5;
         self.imageView.contentMode = UIViewContentModeScaleAspectFill;
         [self.contentView addSubview:self.imageView];
@@ -49,9 +49,10 @@
             make.left.top.right.equalTo(self.contentView);
             make.height.equalTo(self.contentView).multipliedBy(0.6);
         }];
-        self.genderImageView = [[UIImageView alloc]initWithFrame:CGRectMake(-20, 10, kScaleOfScreenWidth(60), kScaleOfScreenHeight(40))];
+        self.genderImageView = [[UIImageView alloc]initWithFrame:CGRectMake(-25, -10, kScaleOfScreenWidth(60), kScaleOfScreenHeight(30))];
         [self.imageView addSubview:self.genderImageView];
-        self.genderImageView.transform = CGAffineTransformMakeRotation(-M_PI_2);
+        self.genderImageView.backgroundColor = [UIColor darkGrayColor];
+        self.genderImageView.transform = CGAffineTransformRotate(self.genderImageView.transform, -M_PI_4);
         self.genderImageView.clipsToBounds = YES;
         
         self.nameLabel = [[UILabel alloc]initWithFrame:CGRectZero];

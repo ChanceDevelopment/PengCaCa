@@ -12,5 +12,9 @@
  登录页面
  */
 @interface LoginViewController : UIViewController
+/**
+ *  导航栏实例,rootViewController是LoginViewController
+ */
+@property(nonatomic,strong,class,readonly)UINavigationController *navigator;
 
 @end

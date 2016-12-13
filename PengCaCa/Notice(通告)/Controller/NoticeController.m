@@ -7,6 +7,7 @@
 //
 
 #import "NoticeController.h"
+#import "Macro.h"
 
 @interface NoticeController ()
 
@@ -17,6 +18,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setupView];
+}
+
+- (void)setupView {
+    UISearchBar *searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, kScaleOfScreenWidth(120), 30)];
+    searchBar.placeholder = @"输入您想要的ID或者昵称";
+    searchBar.layer.cornerRadius = 3;
+    searchBar.clipsToBounds = YES;
+    searchBar.layer.borderColor = [UIColor blackColor].CGColor;
+    searchBar.layer.borderWidth = 1;
+    self.navigationItem.titleView = searchBar;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "Macro.h"
+#import "LoginViewController.h"
 
 @interface MainViewController ()
 
@@ -21,9 +22,11 @@
 }
 
 - (void)setupView {
-    [UINavigationBar appearance].barTintColor = kNavigationColor;
+    [UINavigationBar appearance].barTintColor = [UIColor whiteColor];
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:kSelectedColor} forState:UIControlStateSelected];
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateNormal];
+    
+    [self.navigationController presentViewController:[LoginViewController navigator] animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

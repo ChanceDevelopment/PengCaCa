@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ArtistListTableViewCell : UITableViewCell
-
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 @end

@@ -48,8 +48,6 @@
  */
 @property(nonatomic,strong)UITableView *tableView;
 
-
-
 /**
  *  保存集合视图数据源的数组
  */
@@ -68,12 +66,12 @@
     if (!_collectionView) {
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
         layout.minimumLineSpacing = 10;
-        layout.minimumInteritemSpacing = 5;
+        layout.minimumInteritemSpacing = kScaleOfScreenWidth(7.5);
         _collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
         _collectionView.delegate = self;
         _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.dataSource = self;
-        _collectionView.contentInset = UIEdgeInsetsMake(0, 20, 0, 20);
+        _collectionView.contentInset = UIEdgeInsetsMake(10, 15, 0, 15);
     }
     return _collectionView;
 }
@@ -96,47 +94,23 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     UIButton *locationButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    locationButton.frame = CGRectMake(0, 0, kScaleOfScreenWidth(60), 35);
     locationButton.titleLabel.font = [UIFont systemFontOfSize:13];
     [locationButton setTitle:@"未知" forState:UIControlStateNormal];
     [locationButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [locationButton addTarget:self action:@selector(onLocation:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithCustomView:locationButton];
+    self.navigationItem.leftBarButtonItem = leftItem;
     
+    UISegmentedControl *segmentControl = [[UISegmentedControl alloc]initWithItems:@[@"艺人库",@"我的艺人"]];
+    segmentControl.selectedSegmentIndex = 0;
     
-    UIView *sliderBgView = [[UIView alloc]initWithFrame:CGRectMake(0, 20, kScaleOfScreenWidth(120), 44)];
-    _leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    
-    _leftButton.titleLabel.font = [UIFont boldSystemFontOfSize:14];
-    [_leftButton addTarget:self action:@selector(onLeftAction:) forControlEvents:UIControlEventTouchUpInside];
-    [_leftButton setTitle:@"艺人库" forState:UIControlStateNormal];
-    [_leftButton setTitleColor:kSelectedColor  forState:UIControlStateNormal];
-    [sliderBgView addSubview:_leftButton];
-    [_leftButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(sliderBgView);
-        make.centerY.equalTo(sliderBgView);
-    }];
-    
-    _rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _rightButton.titleLabel.font = [UIFont boldSystemFontOfSize:14];
-    [_rightButton addTarget:self action:@selector(onRightAction:) forControlEvents:UIControlEventTouchUpInside];
-    [_rightButton setTitle:@"我的艺人" forState:UIControlStateNormal];
-    [sliderBgView addSubview:_rightButton];
-    [_rightButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.centerY.equalTo(sliderBgView);
-    }];
-    
-    self.sliderView = [[UIView alloc]initWithFrame:CGRectZero];
-    self.sliderView.backgroundColor = kSelectedColor;
-    self.sliderView.layer.cornerRadius = 2;
-    self.sliderView.clipsToBounds = YES;
-    [sliderBgView addSubview:self.sliderView];
-    [self.sliderView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.bottom.equalTo(sliderBgView);
-        make.width.equalTo(_leftButton);
-        make.height.equalTo(@4);
-    }];
-    
-    
-    self.navigationItem.titleView = sliderBgView;
+    segmentControl.frame = CGRectMake(0, 0, kScaleOfScreenWidth(100), 25);
+    segmentControl.tintColor = kSelectedColor;
+    [segmentControl setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:13]} forState:UIControlStateSelected];
+    [segmentControl setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:[UIFont systemFontOfSize:13]} forState:UIControlStateNormal];
+    self.navigationItem.titleView = segmentControl;
+    [segmentControl addTarget:self action:@selector(onSegment:) forControlEvents:UIControlEventValueChanged];
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithImage:nil style:UIBarButtonItemStylePlain target:self action:@selector(onIdentity:)];
     UIBarButtonItem *lineItem = [[UIBarButtonItem alloc]initWithTitle:@"|" style:UIBarButtonItemStylePlain target:nil action:nil];
@@ -150,7 +124,7 @@
     self.scrollView.scrollEnabled = NO;
     [self.view addSubview:self.scrollView];
     [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_topLayoutGuideBottom).offset(60);
+        make.top.equalTo(self.mas_topLayoutGuideBottom).offset(45);
         make.left.right.equalTo(self.view);
         make.bottom.equalTo(self.mas_bottomLayoutGuideTop);
     }];
@@ -177,6 +151,9 @@
     self.tableView.dataSource = self;
     self.tableView.backgroundColor = [UIColor whiteColor];
     [self.tableView registerClass:[ArtistListTableViewCell class] forCellReuseIdentifier:@"ArtistListTableViewCell"];
+    if ([self.tableView respondsToSelector:@selector(separatorInset)]) {
+        self.tableView.separatorInset = UIEdgeInsetsZero;
+    }
     [containerView addSubview:self.tableView];
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(SCREEN_WIDTH));
@@ -190,35 +167,8 @@
 - (void)onLocation:(UIButton *)item {
     
 }
-
-- (void)onLeftAction:(UIButton *)btn {
-    [btn setTitleColor:kSelectedColor forState:UIControlStateNormal];
-    [self.rightButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.sliderView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(btn);
-        make.bottom.equalTo(self.navigationItem.titleView);
-        make.width.equalTo(btn);
-        make.height.equalTo(@4);
-    }];
-    [UIView animateWithDuration:0.15 animations:^{
-            [self.navigationItem.titleView layoutIfNeeded];
-    }];
-    [self.scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
-}
-
-- (void)onRightAction:(UIButton *)btn {
-    [btn setTitleColor:kSelectedColor forState:UIControlStateNormal];
-    [self.leftButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.sliderView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(btn);
-        make.bottom.equalTo(self.navigationItem.titleView);
-        make.width.equalTo(btn);
-        make.height.equalTo(@4);
-    }];
-    [UIView animateWithDuration:0.15 animations:^{
-            [self.navigationItem.titleView layoutIfNeeded];
-    }];
-    [self.scrollView setContentOffset:CGPointMake(SCREEN_WIDTH, 0) animated:YES];
+- (void)onSegment:(UISegmentedControl *)segment {
+    [self.scrollView setContentOffset:CGPointMake(segment.selectedSegmentIndex * SCREEN_WIDTH, 0) animated:YES];
 }
 
 - (void)onIdentity:(UIButton *)btn {
@@ -233,6 +183,7 @@
 #pragma mark :- UICollectionViewDelegate && DataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+//    return self.dataList.count;
     return 10;
 }
 
@@ -241,14 +192,19 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return  CGSizeMake((SCREEN_WIDTH - 50) / 3, kScaleOfScreenHeight(180));
+    return  CGSizeMake((SCREEN_WIDTH - 50) / 3, kScaleOfScreenHeight(190));
 }
 
 
 #pragma mark :- UITableViewDelegate && DataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.myArtistList.count;
+//    return self.myArtistList.count;
+    return 10;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 75;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
