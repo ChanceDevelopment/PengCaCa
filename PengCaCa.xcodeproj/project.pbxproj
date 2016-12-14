@@ -22,11 +22,19 @@
 		A2A5F7FC1DFE7B07003BC5C1 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F7FB1DFE7B07003BC5C1 /* OrderViewController.m */; };
 		A2A5F7FF1DFE7B55003BC5C1 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F7FE1DFE7B55003BC5C1 /* ScheduleViewController.m */; };
 		A2A5F8021DFE7B85003BC5C1 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F8011DFE7B85003BC5C1 /* MineViewController.m */; };
-		A2A5F8071DFE853A003BC5C1 /* NavigatorSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F8061DFE853A003BC5C1 /* NavigatorSlider.m */; };
 		A2A5F80A1DFE8BBA003BC5C1 /* Macro.h in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F8091DFE8BBA003BC5C1 /* Macro.h */; };
 		A2A5F80D1DFE9957003BC5C1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F80C1DFE9957003BC5C1 /* MainViewController.m */; };
 		A2A5F8111DFE9B41003BC5C1 /* ArtistListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F80F1DFE9B41003BC5C1 /* ArtistListCollectionViewCell.m */; };
 		A2A5F8151DFF802A003BC5C1 /* ArtistListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F8141DFF802A003BC5C1 /* ArtistListTableViewCell.m */; };
+		A2A5F81E1E00D7C4003BC5C1 /* NoticeListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F81C1E00D7C4003BC5C1 /* NoticeListTableViewCell.m */; };
+		A2A5F81F1E00D7C4003BC5C1 /* NoticeListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2A5F81D1E00D7C4003BC5C1 /* NoticeListTableViewCell.xib */; };
+		A2A5F8221E00DAFD003BC5C1 /* LabelShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F8211E00DAFD003BC5C1 /* LabelShowView.m */; };
+		A2A5F8261E00DC36003BC5C1 /* LabelViewItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F8251E00DC36003BC5C1 /* LabelViewItemModel.m */; };
+		A2A5F8291E00F1AB003BC5C1 /* LabelShowViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F8281E00F1AB003BC5C1 /* LabelShowViewCell.m */; };
+		A2A5F82E1E011FDF003BC5C1 /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F82D1E011FDF003BC5C1 /* SliderView.m */; };
+		A2A5F8321E012866003BC5C1 /* ArtistFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F8311E012866003BC5C1 /* ArtistFilterView.m */; };
+		A2A5F8341E01287F003BC5C1 /* ArtistFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2A5F8331E01287F003BC5C1 /* ArtistFilterView.xib */; };
+		A2A5F8381E012C31003BC5C1 /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F8371E012C31003BC5C1 /* UIImage+Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,8 +65,6 @@
 		A2A5F7FE1DFE7B55003BC5C1 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
 		A2A5F8001DFE7B85003BC5C1 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		A2A5F8011DFE7B85003BC5C1 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
-		A2A5F8051DFE853A003BC5C1 /* NavigatorSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigatorSlider.h; sourceTree = "<group>"; };
-		A2A5F8061DFE853A003BC5C1 /* NavigatorSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigatorSlider.m; sourceTree = "<group>"; };
 		A2A5F8091DFE8BBA003BC5C1 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		A2A5F80B1DFE9957003BC5C1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		A2A5F80C1DFE9957003BC5C1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
@@ -66,6 +72,22 @@
 		A2A5F80F1DFE9B41003BC5C1 /* ArtistListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistListCollectionViewCell.m; sourceTree = "<group>"; };
 		A2A5F8131DFF802A003BC5C1 /* ArtistListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistListTableViewCell.h; sourceTree = "<group>"; };
 		A2A5F8141DFF802A003BC5C1 /* ArtistListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistListTableViewCell.m; sourceTree = "<group>"; };
+		A2A5F81B1E00D7C4003BC5C1 /* NoticeListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeListTableViewCell.h; sourceTree = "<group>"; };
+		A2A5F81C1E00D7C4003BC5C1 /* NoticeListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeListTableViewCell.m; sourceTree = "<group>"; };
+		A2A5F81D1E00D7C4003BC5C1 /* NoticeListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeListTableViewCell.xib; sourceTree = "<group>"; };
+		A2A5F8201E00DAFD003BC5C1 /* LabelShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LabelShowView.h; path = PengCaCa/Utils/Views/LabelShowView.h; sourceTree = SOURCE_ROOT; };
+		A2A5F8211E00DAFD003BC5C1 /* LabelShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LabelShowView.m; path = PengCaCa/Utils/Views/LabelShowView.m; sourceTree = SOURCE_ROOT; };
+		A2A5F8241E00DC36003BC5C1 /* LabelViewItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelViewItemModel.h; sourceTree = "<group>"; };
+		A2A5F8251E00DC36003BC5C1 /* LabelViewItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelViewItemModel.m; sourceTree = "<group>"; };
+		A2A5F8271E00F1AB003BC5C1 /* LabelShowViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelShowViewCell.h; sourceTree = "<group>"; };
+		A2A5F8281E00F1AB003BC5C1 /* LabelShowViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelShowViewCell.m; sourceTree = "<group>"; };
+		A2A5F82C1E011FDF003BC5C1 /* SliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderView.h; sourceTree = "<group>"; };
+		A2A5F82D1E011FDF003BC5C1 /* SliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderView.m; sourceTree = "<group>"; };
+		A2A5F8301E012866003BC5C1 /* ArtistFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistFilterView.h; sourceTree = "<group>"; };
+		A2A5F8311E012866003BC5C1 /* ArtistFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistFilterView.m; sourceTree = "<group>"; };
+		A2A5F8331E01287F003BC5C1 /* ArtistFilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtistFilterView.xib; sourceTree = "<group>"; };
+		A2A5F8361E012C31003BC5C1 /* UIImage+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utils.h"; sourceTree = "<group>"; };
+		A2A5F8371E012C31003BC5C1 /* UIImage+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +297,9 @@
 		A2A5F7D61DFE723B003BC5C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A2A5F81B1E00D7C4003BC5C1 /* NoticeListTableViewCell.h */,
+				A2A5F81C1E00D7C4003BC5C1 /* NoticeListTableViewCell.m */,
+				A2A5F81D1E00D7C4003BC5C1 /* NoticeListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -348,6 +373,7 @@
 		A2A5F7DF1DFE723B003BC5C1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A2A5F8351E012C1E003BC5C1 /* Categories */,
 				A2A5F8041DFE8509003BC5C1 /* Views */,
 			);
 			path = Utils;
@@ -356,10 +382,52 @@
 		A2A5F8041DFE8509003BC5C1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A2A5F8051DFE853A003BC5C1 /* NavigatorSlider.h */,
-				A2A5F8061DFE853A003BC5C1 /* NavigatorSlider.m */,
+				A2A5F82F1E012825003BC5C1 /* FilterView */,
+				A2A5F82B1E011FC7003BC5C1 /* SliderView */,
+				A2A5F8231E00DBE9003BC5C1 /* LabelShowView */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A2A5F8231E00DBE9003BC5C1 /* LabelShowView */ = {
+			isa = PBXGroup;
+			children = (
+				A2A5F8201E00DAFD003BC5C1 /* LabelShowView.h */,
+				A2A5F8211E00DAFD003BC5C1 /* LabelShowView.m */,
+				A2A5F8241E00DC36003BC5C1 /* LabelViewItemModel.h */,
+				A2A5F8251E00DC36003BC5C1 /* LabelViewItemModel.m */,
+				A2A5F8271E00F1AB003BC5C1 /* LabelShowViewCell.h */,
+				A2A5F8281E00F1AB003BC5C1 /* LabelShowViewCell.m */,
+			);
+			path = LabelShowView;
+			sourceTree = "<group>";
+		};
+		A2A5F82B1E011FC7003BC5C1 /* SliderView */ = {
+			isa = PBXGroup;
+			children = (
+				A2A5F82C1E011FDF003BC5C1 /* SliderView.h */,
+				A2A5F82D1E011FDF003BC5C1 /* SliderView.m */,
+			);
+			path = SliderView;
+			sourceTree = "<group>";
+		};
+		A2A5F82F1E012825003BC5C1 /* FilterView */ = {
+			isa = PBXGroup;
+			children = (
+				A2A5F8301E012866003BC5C1 /* ArtistFilterView.h */,
+				A2A5F8311E012866003BC5C1 /* ArtistFilterView.m */,
+				A2A5F8331E01287F003BC5C1 /* ArtistFilterView.xib */,
+			);
+			path = FilterView;
+			sourceTree = "<group>";
+		};
+		A2A5F8351E012C1E003BC5C1 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A2A5F8361E012C31003BC5C1 /* UIImage+Utils.h */,
+				A2A5F8371E012C31003BC5C1 /* UIImage+Utils.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,9 +494,11 @@
 			files = (
 				A2A5F7C11DFE7083003BC5C1 /* LaunchScreen.storyboard in Resources */,
 				A2A5F7BE1DFE7083003BC5C1 /* Assets.xcassets in Resources */,
+				A2A5F8341E01287F003BC5C1 /* ArtistFilterView.xib in Resources */,
 				A2A5F7BC1DFE7083003BC5C1 /* Main.storyboard in Resources */,
 				A2A5F7F61DFE7A90003BC5C1 /* RegisterController.xib in Resources */,
 				A2A5F7F11DFE7A71003BC5C1 /* LoginViewController.xib in Resources */,
+				A2A5F81F1E00D7C4003BC5C1 /* NoticeListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,16 +561,22 @@
 				A2A5F7B61DFE7083003BC5C1 /* AppDelegate.m in Sources */,
 				A2A5F7EC1DFE779F003BC5C1 /* ArtistsController.m in Sources */,
 				A2A5F8021DFE7B85003BC5C1 /* MineViewController.m in Sources */,
-				A2A5F8071DFE853A003BC5C1 /* NavigatorSlider.m in Sources */,
+				A2A5F8291E00F1AB003BC5C1 /* LabelShowViewCell.m in Sources */,
 				A2A5F7B31DFE7083003BC5C1 /* main.m in Sources */,
 				A2A5F8151DFF802A003BC5C1 /* ArtistListTableViewCell.m in Sources */,
 				A2A5F7FC1DFE7B07003BC5C1 /* OrderViewController.m in Sources */,
 				A2A5F80D1DFE9957003BC5C1 /* MainViewController.m in Sources */,
+				A2A5F8221E00DAFD003BC5C1 /* LabelShowView.m in Sources */,
 				A2A5F80A1DFE8BBA003BC5C1 /* Macro.h in Sources */,
+				A2A5F8261E00DC36003BC5C1 /* LabelViewItemModel.m in Sources */,
 				A2A5F7F51DFE7A90003BC5C1 /* RegisterController.m in Sources */,
+				A2A5F82E1E011FDF003BC5C1 /* SliderView.m in Sources */,
 				A2A5F8111DFE9B41003BC5C1 /* ArtistListCollectionViewCell.m in Sources */,
+				A2A5F81E1E00D7C4003BC5C1 /* NoticeListTableViewCell.m in Sources */,
+				A2A5F8321E012866003BC5C1 /* ArtistFilterView.m in Sources */,
 				A2A5F7F91DFE7AD2003BC5C1 /* NoticeController.m in Sources */,
 				A2A5F7FF1DFE7B55003BC5C1 /* ScheduleViewController.m in Sources */,
+				A2A5F8381E012C31003BC5C1 /* UIImage+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

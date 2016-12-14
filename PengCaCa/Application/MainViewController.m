@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "Macro.h"
 #import "LoginViewController.h"
+#import "UIImage+Utils.h"
 
 @interface MainViewController ()
 
@@ -22,9 +23,12 @@
 }
 
 - (void)setupView {
-    [UINavigationBar appearance].barTintColor = [UIColor whiteColor];
+    [UINavigationBar appearance].barTintColor = kNavigationColor;
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:kSelectedColor} forState:UIControlStateSelected];
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateNormal];
+    
+    self.tabBar.backgroundImage = [UIImage imageWithColor:[UIColor whiteColor]];
+    self.tabBar.shadowImage = [UIImage new];
     
     [self.navigationController presentViewController:[LoginViewController navigator] animated:YES completion:nil];
 }

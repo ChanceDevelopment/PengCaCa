@@ -9,12 +9,15 @@
 #import "ArtistsController.h"
 #import <CoreLocation/CLLocation.h>
 #import <CoreLocation/CLLocationManagerDelegate.h>
-#import "NavigatorSlider.h"
+#import <Masonry.h>
 #import "Macro.h"
+#import "SliderView.h"
 #import "ArtistListCollectionViewCell.h"
 #import "ArtistListTableViewCell.h"
+#import "ArtistFilterView.h"
 
-@interface ArtistsController ()<CLLocationManagerDelegate>
+
+@interface ArtistsController ()<CLLocationManagerDelegate,ArtistFilterViewDelegate>
 /**
  *  定位管理器
  */
@@ -58,6 +61,16 @@
  */
 @property(nonatomic,copy)NSMutableArray *myArtistList;
 
+/**
+ *  过滤View 数组
+ */
+@property(nonatomic,strong)ArtistFilterView *filterView;
+
+/**
+ *  当前展示的列表类型
+ */
+@property(nonatomic,assign)ArtistType currentArtistType;
+
 @end
 
 @implementation ArtistsController
@@ -71,7 +84,7 @@
         _collectionView.delegate = self;
         _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.dataSource = self;
-        _collectionView.contentInset = UIEdgeInsetsMake(10, 15, 0, 15);
+        _collectionView.contentInset = UIEdgeInsetsMake(10, 15, 44, 15);
     }
     return _collectionView;
 }
@@ -102,15 +115,17 @@
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithCustomView:locationButton];
     self.navigationItem.leftBarButtonItem = leftItem;
     
-    UISegmentedControl *segmentControl = [[UISegmentedControl alloc]initWithItems:@[@"艺人库",@"我的艺人"]];
-    segmentControl.selectedSegmentIndex = 0;
-    
-    segmentControl.frame = CGRectMake(0, 0, kScaleOfScreenWidth(100), 25);
-    segmentControl.tintColor = kSelectedColor;
-    [segmentControl setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:13]} forState:UIControlStateSelected];
-    [segmentControl setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:[UIFont systemFontOfSize:13]} forState:UIControlStateNormal];
-    self.navigationItem.titleView = segmentControl;
-    [segmentControl addTarget:self action:@selector(onSegment:) forControlEvents:UIControlEventValueChanged];
+    SliderView *slider = [[SliderView alloc]initWithFrame:CGRectMake(0, 0, kScaleOfScreenWidth(160), 44) titleList:@[@"艺人库",@"我的艺人"]];
+    __weak typeof(self) weakSelf = self;
+    slider.onSelectIndex = ^(NSUInteger index) {
+        [weakSelf.scrollView setContentOffset:CGPointMake(index * SCREEN_WIDTH, 0) animated:YES];
+        if (index == 0) {
+            weakSelf.currentArtistType = ArtistTypeAllArtists;
+        } else {
+            weakSelf.currentArtistType = ArtistTypeMyArtists;
+        }
+    };
+    self.navigationItem.titleView = slider;
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithImage:nil style:UIBarButtonItemStylePlain target:self action:@selector(onIdentity:)];
     UIBarButtonItem *lineItem = [[UIBarButtonItem alloc]initWithTitle:@"|" style:UIBarButtonItemStylePlain target:nil action:nil];
@@ -119,14 +134,23 @@
     UIBarButtonItem *searchItem = [[UIBarButtonItem alloc]initWithImage:nil style:UIBarButtonItemStylePlain target:self action:@selector(onSearch:)];
     self.navigationItem.rightBarButtonItems = @[item,lineItem,searchItem];
     
+    self.filterView = (ArtistFilterView *)[[[NSBundle mainBundle] loadNibNamed:@"ArtistFilterView" owner:nil options:nil] firstObject];
+    self.filterView.delegate = self;
+    [self.view addSubview:self.filterView];
+    [self.filterView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.view);
+        make.top.equalTo(self.mas_topLayoutGuideBottom);
+        make.height.equalTo(@(40));
+    }];
+    
     self.scrollView = [[UIScrollView alloc]init];
     self.scrollView.pagingEnabled = YES;
     self.scrollView.scrollEnabled = NO;
     [self.view addSubview:self.scrollView];
     [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_topLayoutGuideBottom).offset(45);
+        make.top.equalTo(self.mas_topLayoutGuideBottom).offset(40);
         make.left.right.equalTo(self.view);
-        make.bottom.equalTo(self.mas_bottomLayoutGuideTop);
+        make.bottom.equalTo(self.view);
     }];
     
     UIView *containerView = [[UIView alloc]initWithFrame:CGRectZero];
@@ -150,6 +174,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.backgroundColor = [UIColor whiteColor];
+    self.tableView.contentInset  =UIEdgeInsetsMake(0, 0, 44, 0);
     [self.tableView registerClass:[ArtistListTableViewCell class] forCellReuseIdentifier:@"ArtistListTableViewCell"];
     if ([self.tableView respondsToSelector:@selector(separatorInset)]) {
         self.tableView.separatorInset = UIEdgeInsetsZero;
@@ -161,16 +186,21 @@
     }];
 }
 
+#pragma mark :- Filter Box Delegate
+- (void)beginFilter:(NSString *)rule {
+    
+}
+
+- (void)endFilter:(NSString *)rule {
+    
+}
+
 /**
  导航栏位置按钮点击
  */
 - (void)onLocation:(UIButton *)item {
     
 }
-- (void)onSegment:(UISegmentedControl *)segment {
-    [self.scrollView setContentOffset:CGPointMake(segment.selectedSegmentIndex * SCREEN_WIDTH, 0) animated:YES];
-}
-
 - (void)onIdentity:(UIButton *)btn {
     
 }

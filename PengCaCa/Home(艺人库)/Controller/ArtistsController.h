@@ -9,6 +9,18 @@
 #import <UIKit/UIKit.h>
 
 
+/**
+ 艺人库查询类型
+
+ - ArtistTypeAllArtists: 艺人库
+ - ArtistTypeMyArtists: 我的艺人
+ */
+typedef NS_ENUM(NSUInteger, ArtistType) {
+    ArtistTypeAllArtists,
+    ArtistTypeMyArtists
+};
+
+
 
 /**
  艺人库首页

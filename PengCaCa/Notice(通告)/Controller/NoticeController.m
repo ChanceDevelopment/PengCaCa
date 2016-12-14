@@ -33,6 +33,15 @@
     searchBar.clipsToBounds = YES;
     searchBar.layer.borderColor = [UIColor blackColor].CGColor;
     searchBar.layer.borderWidth = 1;
+    
+    UITextField *textfield = [searchBar valueForKeyPath:@"_searchField"];//修改占位符字体
+    NSMutableAttributedString *placeHolder = [[NSMutableAttributedString alloc]initWithString:searchBar.placeholder];
+    [placeHolder addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:NSMakeRange(0, searchBar.placeholder.length)];
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.alignment = NSTextAlignmentCenter;
+    [placeHolder addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, searchBar.placeholder.length)];
+    textfield.attributedPlaceholder = placeHolder;
+    
     [containerView addSubview:searchBar];
     self.navigationItem.titleView = containerView;
     
@@ -49,7 +58,6 @@
     [releaseOrderBtn setTitle:@"发布订单" forState:UIControlStateNormal];
     releaseOrderBtn.titleLabel.font = [UIFont systemFontOfSize:13];
     [releaseOrderBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//    releaseOrderBtn.imageEdgeInsets = UIEdgeInsetsMake(0, <#CGFloat left#>, <#CGFloat bottom#>, <#CGFloat right#>)
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithCustomView:releaseOrderBtn];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
