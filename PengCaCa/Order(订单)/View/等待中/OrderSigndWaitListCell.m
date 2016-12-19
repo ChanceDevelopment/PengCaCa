@@ -27,7 +27,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    
+     
 }
 
 - (void)setFrame:(CGRect)frame {
