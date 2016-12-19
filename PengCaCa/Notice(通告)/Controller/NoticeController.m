@@ -8,12 +8,36 @@
 
 #import "NoticeController.h"
 #import "Macro.h"
+#import "NoticeListTableViewCell.h"
+#import "ArtistFilterView.h"
+#import <Masonry.h>
 
-@interface NoticeController ()
+@interface NoticeController ()<UITableViewDelegate,UITableViewDataSource,ArtistFilterViewDelegate>
 /**
  *  导航栏左边按钮
  */
 @property(nonatomic,strong)UIButton *leftButtonItem;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+/**
+ *  是否需要展示已被过滤的数据
+ */
+@property(nonatomic,assign)BOOL showFiltered;
+
+/**
+ *  完整的数据列表
+ */
+@property(nonatomic,strong)NSMutableArray *dataArray;
+
+/**
+ *  过滤之后的数据列表
+ */
+@property(nonatomic,strong)NSMutableArray *filterArray;
+
+/**
+ *  数据源过滤器
+ */
+@property(nonatomic,strong)ArtistFilterView *filterView;
 
 @end
 
@@ -26,6 +50,17 @@
 }
 
 - (void)setupView {
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    self.filterView = [[[NSBundle mainBundle]loadNibNamed:@"ArtistFilterView" owner:nil options:nil] firstObject];
+    self.filterView.delegate = self;
+    [self.view addSubview:self.filterView];
+    [self.filterView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.mas_topLayoutGuideBottom);
+        make.left.right.equalTo(self.view);
+        make.height.equalTo(@(40));
+    }];
+    
     UIView *containerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScaleOfScreenWidth(185), 28)];
     UISearchBar *searchBar = [[UISearchBar alloc]initWithFrame:containerView.bounds];
     searchBar.placeholder = @"输入您想要的ID或者昵称";
@@ -60,11 +95,43 @@
     [releaseOrderBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithCustomView:releaseOrderBtn];
     self.navigationItem.rightBarButtonItem = rightItem;
+    
+    self.tableView.separatorStyle  =UITableViewCellSeparatorStyleNone;
+    [self.tableView registerNib:[UINib nibWithNibName:@"NoticeListTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"NoticeListTableViewCell"];
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 49, 0);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark :- FilterView Delegate 
+- (void)beginFilter:(NSString *)rule {
+    NSLog(@"begin filter rule name %@",rule);
+}
+
+- (void)endFilter:(NSString *)rule {
+    NSLog(@"end filter rule name %@",rule);
+}
+
+#pragma mark :- UITableViewDelegate & DataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//    return self.showFiltered ? self.filterArray.count : self.dataArray.count;
+    return 10;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 150;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [tableView dequeueReusableCellWithIdentifier:@"NoticeListTableViewCell" forIndexPath:indexPath];
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 
 /*

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="226" id="KGk-i7-Jjw" customClass="OrderReleasedWaitListCell">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="226"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="360" height="225.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="国家大剧院芭蕾舞" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSK-Nq-dLF">
+                        <rect key="frame" x="118.5" y="10" width="123" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="剩余 5天 3h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mb-nI-uhj">
+                        <rect key="frame" x="289" y="12" width="66" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="1" green="0.62229794260000004" blue="0.094177849590000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="芭蕾舞" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFl-mb-Bhy">
+                        <rect key="frame" x="10" y="33" width="40" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.71364659070000003" green="0.71377098559999996" blue="0.71363878250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AE6-Ae-Oeh">
+                        <rect key="frame" x="60" y="28" width="30" height="26"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="20人">
+                            <color key="titleColor" red="0.71364659070000003" green="0.71377098559999996" blue="0.71363878250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVq-O0-KdR">
+                        <rect key="frame" x="95" y="28" width="30" height="26"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="10人">
+                            <color key="titleColor" red="0.71364659070000003" green="0.71377098559999996" blue="0.71363878250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="I5A-E0-3mD" customClass="LabelShowView">
+                        <rect key="frame" x="10" y="57" width="340" height="25"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="kZk-Ib-jy3"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EdM-Ci-TWe">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="活动档期: 2016.6.9-2016.6.10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KR-O1-qz5">
+                        <rect key="frame" x="10" y="87" width="165" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.71364659070000003" green="0.71377098559999996" blue="0.71363878250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z0U-vF-hIe">
+                        <rect key="frame" x="10" y="104.5" width="340" height="2"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="d5T-97-ei9"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="总计: 6000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLk-LI-3Ct">
+                        <rect key="frame" x="10" y="116.5" width="71.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="1" green="0.62654465436935425" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="报名 20 人 | 已选 15 人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKP-iD-yrb">
+                        <rect key="frame" x="214.5" y="117.5" width="135.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyJ-Vo-Pyy">
+                        <rect key="frame" x="305" y="143.5" width="45" height="18"/>
+                        <color key="backgroundColor" red="1" green="0.62654465439999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="Sdj-Hu-lti"/>
+                            <constraint firstAttribute="width" constant="45" id="ush-Ub-HLd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="选人">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="onChosePerson:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cYe-Yr-SkM"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="TyJ-Vo-Pyy" firstAttribute="top" secondItem="uKP-iD-yrb" secondAttribute="bottom" constant="10" id="0FW-ZH-bg4"/>
+                    <constraint firstAttribute="trailing" secondItem="TyJ-Vo-Pyy" secondAttribute="trailing" constant="10" id="2zY-2J-dI4"/>
+                    <constraint firstItem="I5A-E0-3mD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="6Wp-py-Wgw"/>
+                    <constraint firstItem="QSK-Nq-dLF" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="9cP-NB-hbD"/>
+                    <constraint firstItem="AE6-Ae-Oeh" firstAttribute="leading" secondItem="wFl-mb-Bhy" secondAttribute="trailing" constant="10" id="Bzx-60-uZu"/>
+                    <constraint firstItem="qLk-LI-3Ct" firstAttribute="top" secondItem="Z0U-vF-hIe" secondAttribute="bottom" constant="10" id="CR3-UR-MYb"/>
+                    <constraint firstItem="uKP-iD-yrb" firstAttribute="centerY" secondItem="qLk-LI-3Ct" secondAttribute="centerY" id="Cmo-AR-e4t"/>
+                    <constraint firstItem="Z0U-vF-hIe" firstAttribute="top" secondItem="9KR-O1-qz5" secondAttribute="bottom" constant="3" id="KiX-4F-WTK"/>
+                    <constraint firstItem="NVq-O0-KdR" firstAttribute="leading" secondItem="AE6-Ae-Oeh" secondAttribute="trailing" constant="5" id="MrW-IC-GDn"/>
+                    <constraint firstAttribute="trailing" secondItem="Z0U-vF-hIe" secondAttribute="trailing" constant="10" id="OcG-Vs-dAi"/>
+                    <constraint firstItem="9KR-O1-qz5" firstAttribute="top" secondItem="I5A-E0-3mD" secondAttribute="bottom" constant="5" id="PVf-Ad-PcR"/>
+                    <constraint firstItem="4Mb-nI-uhj" firstAttribute="centerY" secondItem="QSK-Nq-dLF" secondAttribute="centerY" id="Qgz-TS-RMu"/>
+                    <constraint firstItem="I5A-E0-3mD" firstAttribute="top" secondItem="NVq-O0-KdR" secondAttribute="bottom" constant="3" id="Qzx-mX-vSd"/>
+                    <constraint firstItem="9KR-O1-qz5" firstAttribute="leading" secondItem="I5A-E0-3mD" secondAttribute="leading" id="RBK-3I-SNA"/>
+                    <constraint firstItem="QSK-Nq-dLF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Xlk-Gn-ZT9"/>
+                    <constraint firstAttribute="trailing" secondItem="I5A-E0-3mD" secondAttribute="trailing" constant="10" id="Xos-eE-YJd"/>
+                    <constraint firstItem="NVq-O0-KdR" firstAttribute="centerY" secondItem="AE6-Ae-Oeh" secondAttribute="centerY" id="Zjg-7F-Run"/>
+                    <constraint firstAttribute="trailing" secondItem="uKP-iD-yrb" secondAttribute="trailing" constant="10" id="cX7-3j-0hk"/>
+                    <constraint firstItem="wFl-mb-Bhy" firstAttribute="top" secondItem="QSK-Nq-dLF" secondAttribute="bottom" constant="5" id="idr-1z-2G4"/>
+                    <constraint firstAttribute="trailing" secondItem="4Mb-nI-uhj" secondAttribute="trailing" constant="5" id="pee-CV-B5L"/>
+                    <constraint firstItem="AE6-Ae-Oeh" firstAttribute="centerY" secondItem="wFl-mb-Bhy" secondAttribute="centerY" id="wqg-n3-Qu4"/>
+                    <constraint firstItem="qLk-LI-3Ct" firstAttribute="leading" secondItem="9KR-O1-qz5" secondAttribute="leading" id="x7R-Kx-hbc"/>
+                    <constraint firstItem="wFl-mb-Bhy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="xeX-8r-PC1"/>
+                    <constraint firstItem="Z0U-vF-hIe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="zSr-oD-T08"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="danceLabel" destination="wFl-mb-Bhy" id="4l9-pb-8GS"/>
+                <outlet property="femaleBtn" destination="AE6-Ae-Oeh" id="La1-eJ-C1e"/>
+                <outlet property="labelView" destination="I5A-E0-3mD" id="9CM-60-bgf"/>
+                <outlet property="menLabel" destination="NVq-O0-KdR" id="LVI-6x-6Nh"/>
+                <outlet property="nameLabel" destination="QSK-Nq-dLF" id="hPF-eD-ytR"/>
+                <outlet property="remainingLabel" destination="4Mb-nI-uhj" id="TAk-Oe-aaR"/>
+                <outlet property="scheduleLabel" destination="9KR-O1-qz5" id="Ft6-t2-kRP"/>
+                <outlet property="signedLabel" destination="uKP-iD-yrb" id="vQJ-jb-Mcc"/>
+                <outlet property="totalPriceLabel" destination="qLk-LI-3Ct" id="k57-ZP-QvH"/>
+            </connections>
+            <point key="canvasLocation" x="54" y="176"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -32,6 +32,6 @@
 /**
  *  -.-
  */
-@property(nonatomic,assign)id<ArtistFilterViewDelegate>delegate;
+@property(nonatomic,weak)id<ArtistFilterViewDelegate>delegate;
 
 @end

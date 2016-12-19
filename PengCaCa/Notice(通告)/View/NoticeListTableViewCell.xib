@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -125,6 +125,7 @@
             <connections>
                 <outlet property="contentLabel" destination="jcg-VO-Cje" id="gbK-iJ-aqO"/>
                 <outlet property="femaleButton" destination="aFY-Zo-w33" id="q1K-4D-yxa"/>
+                <outlet property="labelShowViewHeightConstraint" destination="fMx-Gx-KPO" id="ZWJ-Gi-9sC"/>
                 <outlet property="labelView" destination="zdx-ug-nNP" id="4iX-DT-lGo"/>
                 <outlet property="lineImageView" destination="MrH-tD-yF9" id="KK0-TP-dU7"/>
                 <outlet property="menButton" destination="vvq-Ut-hPy" id="D1o-TG-ghQ"/>

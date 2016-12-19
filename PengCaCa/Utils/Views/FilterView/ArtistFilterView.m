@@ -86,14 +86,18 @@
         }
     }
     if (!_showned) {
-        if (_delegate) {
+        if (_delegate && [_delegate respondsToSelector:@selector(beginFilter:)]) {
             [_delegate beginFilter:sender.titleLabel.text];
         }
+        _showned = YES;
     } else {
-        if (_delegate) {
-            [_delegate endFilter:_lastSelectedRule];
-            [_delegate beginFilter:sender.titleLabel.text];
+        if (_delegate && [_delegate respondsToSelector:@selector(endFilter:)] ) {
+                [_delegate endFilter:_lastSelectedRule];
+            if ([_delegate respondsToSelector:@selector(beginFilter:)]) {
+                    [_delegate beginFilter:sender.titleLabel.text];
+            }
         }
+        _showned = NO;
     }
     _lastSelectedRule = sender.titleLabel.text;
 }

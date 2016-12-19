@@ -8,7 +8,8 @@
 
 #import "LabelShowView.h"
 #import "LabelViewItemModel.h"
-@interface LabelShowView () <UICollectionViewDelegate,UICollectionViewDataSource>
+#import "LabelShowViewCell.h"
+@interface LabelShowView () <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 /**
  *  标签列表数组
  */
@@ -17,18 +18,35 @@
 
 @implementation LabelShowView
 
+- (NSMutableArray<LabelViewItemModel *> *)labelList {
+    if (!_labelList) {
+        _labelList = [NSMutableArray array];
+    }
+    return _labelList;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     layout.minimumLineSpacing = 5;
     layout.minimumInteritemSpacing = 5;
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     if (self = [super initWithFrame:frame collectionViewLayout:layout]) {
-        self.backgroundColor = [UIColor whiteColor];
-        self.scrollEnabled = NO;
-        self.delegate = self;
-        self.dataSource = self;
+        [self setupView];
     }
     return self;
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    [self setupView];
+}
+
+- (void)setupView {
+    self.backgroundColor = [UIColor whiteColor];
+    self.scrollEnabled = NO;
+    self.delegate = self;
+    self.dataSource = self;
+    [self registerClass:[LabelShowViewCell class] forCellWithReuseIdentifier:@"LabelShowViewCell"];
 }
 
 - (void)setLabelArray:(NSArray<NSString *> *)labelArray {
@@ -61,13 +79,16 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return  [collectionView dequeueReusableCellWithReuseIdentifier:@"" forIndexPath:indexPath];
+    return  [collectionView dequeueReusableCellWithReuseIdentifier:@"LabelShowViewCell" forIndexPath:indexPath];
 }
 
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(LabelShowViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    cell.labelName = self.labelList[indexPath.item].labelName;
+}
 
-
-
-
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return self.labelList[indexPath.row].itemSize;
+}
 
 + (CGFloat)labelHeightInRectWidth:(CGFloat)rectWidth
                            labels:(NSArray<NSString *> *)labels

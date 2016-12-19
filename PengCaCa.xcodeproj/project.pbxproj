@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		27F349BD543B7CF5132106FD /* libPods-PengCaCa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B2DE9471B964B20BD34CAF0 /* libPods-PengCaCa.a */; };
+		A211A3271E0779C5004C3331 /* OrderWaitListController.m in Sources */ = {isa = PBXBuildFile; fileRef = A211A3261E0779C5004C3331 /* OrderWaitListController.m */; };
+		A211A32A1E077B82004C3331 /* OrderOnGoingListController.m in Sources */ = {isa = PBXBuildFile; fileRef = A211A3291E077B82004C3331 /* OrderOnGoingListController.m */; };
+		A211A32D1E077BDA004C3331 /* OrderFinishedListController.m in Sources */ = {isa = PBXBuildFile; fileRef = A211A32C1E077BDA004C3331 /* OrderFinishedListController.m */; };
+		A211A3331E077F8A004C3331 /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = A211A3321E077F8A004C3331 /* UIButton+Badge.m */; };
+		A211A3371E078302004C3331 /* OrderSigndWaitListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A211A3351E078302004C3331 /* OrderSigndWaitListCell.m */; };
+		A211A3381E078302004C3331 /* OrderSigndWaitListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A211A3361E078302004C3331 /* OrderSigndWaitListCell.xib */; };
+		A211A33C1E07834F004C3331 /* OrderReleasedWaitListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A211A33A1E07834F004C3331 /* OrderReleasedWaitListCell.m */; };
+		A211A33D1E07834F004C3331 /* OrderReleasedWaitListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A211A33B1E07834F004C3331 /* OrderReleasedWaitListCell.xib */; };
 		A2A5F7B31DFE7083003BC5C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F7B21DFE7083003BC5C1 /* main.m */; };
 		A2A5F7B61DFE7083003BC5C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F7B51DFE7083003BC5C1 /* AppDelegate.m */; };
 		A2A5F7BC1DFE7083003BC5C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A5F7BA1DFE7083003BC5C1 /* Main.storyboard */; };
@@ -41,6 +49,20 @@
 		06A496B511B833ACCEDA8866 /* Pods-PengCaCa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PengCaCa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PengCaCa/Pods-PengCaCa.debug.xcconfig"; sourceTree = "<group>"; };
 		5B2DE9471B964B20BD34CAF0 /* libPods-PengCaCa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PengCaCa.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A354A661DBAB518D3D876CD /* Pods-PengCaCa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PengCaCa.release.xcconfig"; path = "Pods/Target Support Files/Pods-PengCaCa/Pods-PengCaCa.release.xcconfig"; sourceTree = "<group>"; };
+		A211A3251E0779C5004C3331 /* OrderWaitListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderWaitListController.h; sourceTree = "<group>"; };
+		A211A3261E0779C5004C3331 /* OrderWaitListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderWaitListController.m; sourceTree = "<group>"; };
+		A211A3281E077B82004C3331 /* OrderOnGoingListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderOnGoingListController.h; sourceTree = "<group>"; };
+		A211A3291E077B82004C3331 /* OrderOnGoingListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderOnGoingListController.m; sourceTree = "<group>"; };
+		A211A32B1E077BDA004C3331 /* OrderFinishedListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderFinishedListController.h; sourceTree = "<group>"; };
+		A211A32C1E077BDA004C3331 /* OrderFinishedListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderFinishedListController.m; sourceTree = "<group>"; };
+		A211A3311E077F8A004C3331 /* UIButton+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Badge.h"; sourceTree = "<group>"; };
+		A211A3321E077F8A004C3331 /* UIButton+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Badge.m"; sourceTree = "<group>"; };
+		A211A3341E078302004C3331 /* OrderSigndWaitListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderSigndWaitListCell.h; sourceTree = "<group>"; };
+		A211A3351E078302004C3331 /* OrderSigndWaitListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderSigndWaitListCell.m; sourceTree = "<group>"; };
+		A211A3361E078302004C3331 /* OrderSigndWaitListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderSigndWaitListCell.xib; sourceTree = "<group>"; };
+		A211A3391E07834F004C3331 /* OrderReleasedWaitListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderReleasedWaitListCell.h; sourceTree = "<group>"; };
+		A211A33A1E07834F004C3331 /* OrderReleasedWaitListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderReleasedWaitListCell.m; sourceTree = "<group>"; };
+		A211A33B1E07834F004C3331 /* OrderReleasedWaitListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderReleasedWaitListCell.xib; sourceTree = "<group>"; };
 		A2A5F7AE1DFE7083003BC5C1 /* PengCaCa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PengCaCa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A5F7B21DFE7083003BC5C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2A5F7B41DFE7083003BC5C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +139,33 @@
 				5B2DE9471B964B20BD34CAF0 /* libPods-PengCaCa.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A211A32E1E077C1E004C3331 /* 等待中 */ = {
+			isa = PBXGroup;
+			children = (
+				A211A3341E078302004C3331 /* OrderSigndWaitListCell.h */,
+				A211A3351E078302004C3331 /* OrderSigndWaitListCell.m */,
+				A211A3361E078302004C3331 /* OrderSigndWaitListCell.xib */,
+				A211A3391E07834F004C3331 /* OrderReleasedWaitListCell.h */,
+				A211A33A1E07834F004C3331 /* OrderReleasedWaitListCell.m */,
+				A211A33B1E07834F004C3331 /* OrderReleasedWaitListCell.xib */,
+			);
+			path = "等待中";
+			sourceTree = "<group>";
+		};
+		A211A32F1E077C1E004C3331 /* 进行中 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "进行中";
+			sourceTree = "<group>";
+		};
+		A211A3301E077C1E004C3331 /* 已完成 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "已完成";
 			sourceTree = "<group>";
 		};
 		A2A5F7A51DFE7083003BC5C1 = {
@@ -319,6 +368,12 @@
 			children = (
 				A2A5F7FA1DFE7B07003BC5C1 /* OrderViewController.h */,
 				A2A5F7FB1DFE7B07003BC5C1 /* OrderViewController.m */,
+				A211A3251E0779C5004C3331 /* OrderWaitListController.h */,
+				A211A3261E0779C5004C3331 /* OrderWaitListController.m */,
+				A211A3281E077B82004C3331 /* OrderOnGoingListController.h */,
+				A211A3291E077B82004C3331 /* OrderOnGoingListController.m */,
+				A211A32B1E077BDA004C3331 /* OrderFinishedListController.h */,
+				A211A32C1E077BDA004C3331 /* OrderFinishedListController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -333,6 +388,9 @@
 		A2A5F7DA1DFE723B003BC5C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A211A32E1E077C1E004C3331 /* 等待中 */,
+				A211A32F1E077C1E004C3331 /* 进行中 */,
+				A211A3301E077C1E004C3331 /* 已完成 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -426,6 +484,8 @@
 			children = (
 				A2A5F8361E012C31003BC5C1 /* UIImage+Utils.h */,
 				A2A5F8371E012C31003BC5C1 /* UIImage+Utils.m */,
+				A211A3311E077F8A004C3331 /* UIButton+Badge.h */,
+				A211A3321E077F8A004C3331 /* UIButton+Badge.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -497,6 +557,8 @@
 				A2A5F8341E01287F003BC5C1 /* ArtistFilterView.xib in Resources */,
 				A2A5F7BC1DFE7083003BC5C1 /* Main.storyboard in Resources */,
 				A2A5F7F61DFE7A90003BC5C1 /* RegisterController.xib in Resources */,
+				A211A33D1E07834F004C3331 /* OrderReleasedWaitListCell.xib in Resources */,
+				A211A3381E078302004C3331 /* OrderSigndWaitListCell.xib in Resources */,
 				A2A5F7F11DFE7A71003BC5C1 /* LoginViewController.xib in Resources */,
 				A2A5F81F1E00D7C4003BC5C1 /* NoticeListTableViewCell.xib in Resources */,
 			);
@@ -563,7 +625,9 @@
 				A2A5F8021DFE7B85003BC5C1 /* MineViewController.m in Sources */,
 				A2A5F8291E00F1AB003BC5C1 /* LabelShowViewCell.m in Sources */,
 				A2A5F7B31DFE7083003BC5C1 /* main.m in Sources */,
+				A211A32A1E077B82004C3331 /* OrderOnGoingListController.m in Sources */,
 				A2A5F8151DFF802A003BC5C1 /* ArtistListTableViewCell.m in Sources */,
+				A211A32D1E077BDA004C3331 /* OrderFinishedListController.m in Sources */,
 				A2A5F7FC1DFE7B07003BC5C1 /* OrderViewController.m in Sources */,
 				A2A5F80D1DFE9957003BC5C1 /* MainViewController.m in Sources */,
 				A2A5F8221E00DAFD003BC5C1 /* LabelShowView.m in Sources */,
@@ -571,12 +635,16 @@
 				A2A5F8261E00DC36003BC5C1 /* LabelViewItemModel.m in Sources */,
 				A2A5F7F51DFE7A90003BC5C1 /* RegisterController.m in Sources */,
 				A2A5F82E1E011FDF003BC5C1 /* SliderView.m in Sources */,
+				A211A33C1E07834F004C3331 /* OrderReleasedWaitListCell.m in Sources */,
+				A211A3271E0779C5004C3331 /* OrderWaitListController.m in Sources */,
 				A2A5F8111DFE9B41003BC5C1 /* ArtistListCollectionViewCell.m in Sources */,
 				A2A5F81E1E00D7C4003BC5C1 /* NoticeListTableViewCell.m in Sources */,
+				A211A3331E077F8A004C3331 /* UIButton+Badge.m in Sources */,
 				A2A5F8321E012866003BC5C1 /* ArtistFilterView.m in Sources */,
 				A2A5F7F91DFE7AD2003BC5C1 /* NoticeController.m in Sources */,
 				A2A5F7FF1DFE7B55003BC5C1 /* ScheduleViewController.m in Sources */,
 				A2A5F8381E012C31003BC5C1 /* UIImage+Utils.m in Sources */,
+				A211A3371E078302004C3331 /* OrderSigndWaitListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
