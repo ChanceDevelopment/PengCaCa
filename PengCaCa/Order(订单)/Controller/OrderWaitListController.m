@@ -9,6 +9,16 @@
 #import "OrderWaitListController.h"
 
 @interface OrderWaitListController ()
+/**
+ *  是否作为 "我报名"模式展示
+ */
+@property(nonatomic,assign)BOOL showForSigned;
+
+/**
+ *  "我发布的" 等待中订单列表
+ */
+@property(nonatomic,strong)NSMutableArray *waitList;
+
 
 @end
 
@@ -33,12 +43,15 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 //#warning Incomplete implementation, return the number of sections
-    return 0;
+    return self.showForSigned ?   2 : 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete implementation, return the number of rows
-    return 0;
+    if (!self.showForSigned) {
+        return 0;
+    }
+    return self.waitList.count;
 }
 
 

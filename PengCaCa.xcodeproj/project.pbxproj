@@ -16,6 +16,10 @@
 		A211A3381E078302004C3331 /* OrderSigndWaitListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A211A3361E078302004C3331 /* OrderSigndWaitListCell.xib */; };
 		A211A33C1E07834F004C3331 /* OrderReleasedWaitListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A211A33A1E07834F004C3331 /* OrderReleasedWaitListCell.m */; };
 		A211A33D1E07834F004C3331 /* OrderReleasedWaitListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A211A33B1E07834F004C3331 /* OrderReleasedWaitListCell.xib */; };
+		A211A3411E07A690004C3331 /* OrderOnGoingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A211A33F1E07A690004C3331 /* OrderOnGoingListCell.m */; };
+		A211A3421E07A690004C3331 /* OrderOnGoingListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A211A3401E07A690004C3331 /* OrderOnGoingListCell.xib */; };
+		A211A3461E07AC4F004C3331 /* OrderFinishedListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A211A3441E07AC4F004C3331 /* OrderFinishedListCell.m */; };
+		A211A3471E07AC4F004C3331 /* OrderFinishedListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A211A3451E07AC4F004C3331 /* OrderFinishedListCell.xib */; };
 		A2A5F7B31DFE7083003BC5C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F7B21DFE7083003BC5C1 /* main.m */; };
 		A2A5F7B61DFE7083003BC5C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5F7B51DFE7083003BC5C1 /* AppDelegate.m */; };
 		A2A5F7BC1DFE7083003BC5C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A5F7BA1DFE7083003BC5C1 /* Main.storyboard */; };
@@ -63,6 +67,12 @@
 		A211A3391E07834F004C3331 /* OrderReleasedWaitListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderReleasedWaitListCell.h; sourceTree = "<group>"; };
 		A211A33A1E07834F004C3331 /* OrderReleasedWaitListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderReleasedWaitListCell.m; sourceTree = "<group>"; };
 		A211A33B1E07834F004C3331 /* OrderReleasedWaitListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderReleasedWaitListCell.xib; sourceTree = "<group>"; };
+		A211A33E1E07A690004C3331 /* OrderOnGoingListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderOnGoingListCell.h; sourceTree = "<group>"; };
+		A211A33F1E07A690004C3331 /* OrderOnGoingListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderOnGoingListCell.m; sourceTree = "<group>"; };
+		A211A3401E07A690004C3331 /* OrderOnGoingListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderOnGoingListCell.xib; sourceTree = "<group>"; };
+		A211A3431E07AC4F004C3331 /* OrderFinishedListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderFinishedListCell.h; sourceTree = "<group>"; };
+		A211A3441E07AC4F004C3331 /* OrderFinishedListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderFinishedListCell.m; sourceTree = "<group>"; };
+		A211A3451E07AC4F004C3331 /* OrderFinishedListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderFinishedListCell.xib; sourceTree = "<group>"; };
 		A2A5F7AE1DFE7083003BC5C1 /* PengCaCa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PengCaCa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A5F7B21DFE7083003BC5C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2A5F7B41DFE7083003BC5C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -150,6 +160,12 @@
 				A211A3391E07834F004C3331 /* OrderReleasedWaitListCell.h */,
 				A211A33A1E07834F004C3331 /* OrderReleasedWaitListCell.m */,
 				A211A33B1E07834F004C3331 /* OrderReleasedWaitListCell.xib */,
+				A211A33E1E07A690004C3331 /* OrderOnGoingListCell.h */,
+				A211A33F1E07A690004C3331 /* OrderOnGoingListCell.m */,
+				A211A3401E07A690004C3331 /* OrderOnGoingListCell.xib */,
+				A211A3431E07AC4F004C3331 /* OrderFinishedListCell.h */,
+				A211A3441E07AC4F004C3331 /* OrderFinishedListCell.m */,
+				A211A3451E07AC4F004C3331 /* OrderFinishedListCell.xib */,
 			);
 			path = "等待中";
 			sourceTree = "<group>";
@@ -554,8 +570,10 @@
 			files = (
 				A2A5F7C11DFE7083003BC5C1 /* LaunchScreen.storyboard in Resources */,
 				A2A5F7BE1DFE7083003BC5C1 /* Assets.xcassets in Resources */,
+				A211A3471E07AC4F004C3331 /* OrderFinishedListCell.xib in Resources */,
 				A2A5F8341E01287F003BC5C1 /* ArtistFilterView.xib in Resources */,
 				A2A5F7BC1DFE7083003BC5C1 /* Main.storyboard in Resources */,
+				A211A3421E07A690004C3331 /* OrderOnGoingListCell.xib in Resources */,
 				A2A5F7F61DFE7A90003BC5C1 /* RegisterController.xib in Resources */,
 				A211A33D1E07834F004C3331 /* OrderReleasedWaitListCell.xib in Resources */,
 				A211A3381E078302004C3331 /* OrderSigndWaitListCell.xib in Resources */,
@@ -639,8 +657,10 @@
 				A211A3271E0779C5004C3331 /* OrderWaitListController.m in Sources */,
 				A2A5F8111DFE9B41003BC5C1 /* ArtistListCollectionViewCell.m in Sources */,
 				A2A5F81E1E00D7C4003BC5C1 /* NoticeListTableViewCell.m in Sources */,
+				A211A3461E07AC4F004C3331 /* OrderFinishedListCell.m in Sources */,
 				A211A3331E077F8A004C3331 /* UIButton+Badge.m in Sources */,
 				A2A5F8321E012866003BC5C1 /* ArtistFilterView.m in Sources */,
+				A211A3411E07A690004C3331 /* OrderOnGoingListCell.m in Sources */,
 				A2A5F7F91DFE7AD2003BC5C1 /* NoticeController.m in Sources */,
 				A2A5F7FF1DFE7B55003BC5C1 /* ScheduleViewController.m in Sources */,
 				A2A5F8381E012C31003BC5C1 /* UIImage+Utils.m in Sources */,
