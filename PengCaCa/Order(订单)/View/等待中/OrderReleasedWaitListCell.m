@@ -33,8 +33,6 @@
 
 /**
  选人 按钮
-
- @param sender
  */
 - (IBAction)onChosePerson:(UIButton *)sender {
 }

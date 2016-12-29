@@ -40,9 +40,23 @@
 }
 
 - (void)setupView {
+    
+    
+    
     SliderView *slider = [[SliderView alloc]initWithFrame:CGRectMake(0, 0, kScaleOfScreenWidth(180), 44) titleList:@[@"等待中",@"进行中",@"已完成"]];
+    kWeakSelf;
     slider.onSelectIndex = ^(NSUInteger index) {
-        
+        if (index == 0) {
+            [weakSelf setViewControllers:@[weakSelf.waitListVc] direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
+        } else if (index == 1) {
+            UIPageViewControllerNavigationDirection direction = UIPageViewControllerNavigationDirectionReverse;
+            if (weakSelf.viewControllers.firstObject == weakSelf.waitListVc) {
+                direction = UIPageViewControllerNavigationDirectionForward;
+            }
+            [weakSelf setViewControllers:@[weakSelf.onGoingListVc] direction:direction animated:YES completion:nil];
+        } else {
+            [weakSelf setViewControllers:@[weakSelf.onFinishListVc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+        }
     };
     self.navigationItem.titleView = slider;
     

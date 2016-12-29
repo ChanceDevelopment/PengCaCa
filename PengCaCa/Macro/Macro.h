@@ -21,6 +21,8 @@ colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
+#define kWeakSelf __weak typeof(self) weakSelf = self
+
 ///默认选中颜色
 #define kSelectedColor ([UIColor colorWithRed:253 / 255.0 green:141 / 255.0 blue:21 / 255.0 alpha:1])
 

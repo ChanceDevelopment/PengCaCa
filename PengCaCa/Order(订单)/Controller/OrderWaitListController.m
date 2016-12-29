@@ -7,6 +7,8 @@
 //
 
 #import "OrderWaitListController.h"
+#import "OrderReleasedWaitListCell.h"
+#import "OrderSigndWaitListCell.h"
 
 @interface OrderWaitListController ()
 /**
@@ -32,6 +34,14 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView registerNib:[UINib nibWithNibName:@"OrderSigndWaitListCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"OrderSigndWaitListCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"OrderReleasedWaitListCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"OrderReleasedWaitListCell"];
+    self.tableView.tableFooterView = [UIView new];
+    if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        self.tableView.separatorInset = UIEdgeInsetsZero;
+    }
+    self.tableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,23 +56,47 @@
     return self.showForSigned ?   2 : 1;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 216;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete implementation, return the number of rows
-    if (!self.showForSigned) {
-        return 0;
+    if (!self.showForSigned) {//非 我报名的 模式
+//        return self.waitList.count;
+        return 10;
     }
-    return self.waitList.count;
+    return 10;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier" forIndexPath:indexPath];
+    NSString *reuseId = @"OrderSigndWaitListCell";//我报名的 单元格
+    if (self.showForSigned) {
+        reuseId = @"OrderReleasedWaitListCell";
+    }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId forIndexPath:indexPath];
     
     // Configure the cell...
     
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (!self.showForSigned) {
+        return CGFLOAT_MIN;
+    } else {
+        return 44;
+    }
+}
 
 /*
 // Override to support conditional editing of the table view.
